@@ -207,6 +207,11 @@ section.calculation {
   background-color: var(--color-light-grayish-cyan-2);
 }
 
+.tips-item.checked {
+  background-color: var(--color-strong-cyan);
+  color: var(--color-very-dark-cyan);
+}
+
 section.result {
   display: flex;
   flex-direction: column;
