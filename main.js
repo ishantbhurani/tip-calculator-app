@@ -1,5 +1,6 @@
 const billInput = document.getElementById("bill-amount");
 const numberOfPeopleInput = document.getElementById("number-of-people");
+const tipsItems = document.querySelectorAll(".tips-item");
 
 const colorStrongCyan = "hsl(172, 67%, 45%)";
 const colorSoftRed = "hsl(0, 93%, 68%)";
@@ -8,6 +9,7 @@ const colorTransparent = "transparent";
 let hasError = false;
 let billAmount = 0;
 let numberOfPeople = 0;
+let checkedRadio = null;
 
 const changeBorderColor = (elem, borderColor) =>
   (elem.style.borderColor = borderColor);
@@ -46,5 +48,14 @@ numberOfPeopleInput.onchange = (e) => {
 billInput.onchange = (e) => {
   billAmount = parseInt(e.target.value);
   if (isNaN(billAmount)) billAmount = 0;
-  console.log(billAmount);
 };
+
+tipsItems.forEach((tipsItem) => {
+  tipsItem.addEventListener("click", (e) => {
+    e.preventDefault();
+    tipsItem.children.tip.checked = true;
+    if (checkedRadio) checkedRadio.classList.remove("checked");
+    checkedRadio = tipsItem;
+    checkedRadio.classList.add("checked");
+  });
+});
