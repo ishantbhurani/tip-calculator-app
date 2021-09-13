@@ -14,6 +14,8 @@
   /* Colors */
   /* Primary */
   --color-strong-cyan: hsl(172, 67%, 45%);
+  --color-lighter-cyan: hsl(172, 67%, 65%);
+  --color-soft-red: hsl(0, 93%, 68%);
 
   /* Neutral */
   --color-very-dark-cyan: hsl(183, 100%, 15%);
@@ -118,6 +120,18 @@ section.calculation {
   margin-bottom: 2.5em;
 }
 
+.form-group:last-child {
+  position: relative;
+}
+
+.form-group.error .input-wrapper {
+  border-color: var(--color-soft-red);
+}
+
+.form-group.error .error-msg {
+  display: block;
+}
+
 .bill-label,
 .number-of-people-label,
 .select-tip-text {
@@ -129,6 +143,14 @@ section.calculation {
   margin-bottom: 1em;
 }
 
+.error-msg {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: var(--color-soft-red);
+}
+
 .input-wrapper {
   display: flex;
   flex-direction: row;
@@ -138,10 +160,16 @@ section.calculation {
   color: var(--color-very-dark-cyan);
   background-color: var(--color-light-grayish-cyan-2);
   border-radius: 0.3em;
+  border: 2px solid transparent;
 }
 
 .input-wrapper input::placeholder {
   color: var(--color-dark-grayish-cyan-2);
+}
+
+.input-wrapper:hover,
+.input-wrapper:focus {
+  border-color: var(--color-strong-cyan);
 }
 
 .text-right {
@@ -216,4 +244,9 @@ section.result {
   padding: 0.5em;
   background-color: var(--color-strong-cyan);
   transition: all 0.2s ease-in-out;
+}
+
+.reset-btn:enabled:hover,
+.reset-btn:enabled:focus {
+  background-color: var(--color-lighter-cyan);
 }
