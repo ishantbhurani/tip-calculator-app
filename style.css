@@ -26,8 +26,194 @@
 
 body {
   font-family: var(--font-space-mono);
+  background-color: var(--color-light-grayish-cyan);
+}
+
+h2 {
+  font-size: 3rem;
+  color: var(--color-strong-cyan);
+}
+
+ul {
+  list-style-type: none;
+}
+
+button {
+  font-weight: bold;
+  text-transform: uppercase;
+  color: inherit;
+  background-color: none;
+  border-radius: 0.2em;
+  border: transparent;
+  outline: transparent;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.15;
+  cursor: not-allowed;
+}
+
+label {
+  font-weight: bold;
 }
 
 input {
+  width: 100%;
   font-size: var(--font-form-input-size);
+  font-weight: bold;
+  font-family: inherit;
+  color: inherit;
+  background: none;
+  border: transparent;
+  outline: transparent;
+  flex-grow: 1;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+/*
+  To remove input spinner,
+  credit: w3schools.com
+*/
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 5em;
+}
+
+.container {
+  width: 80%;
+  max-width: 950px;
+  margin: 10vh auto;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2em;
+  padding: 2em;
+  background-color: var(--color-white);
+  border-radius: 1.5em;
+}
+
+section.calculation {
+  padding: 1em;
+}
+
+.form-group:not(:last-child) {
+  margin-bottom: 2.5em;
+}
+
+.bill-label,
+.number-of-people-label,
+.select-tip-text {
+  color: var(--color-dark-grayish-cyan);
+}
+
+.select-tip-text {
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0.5em 1em;
+  margin-top: 0.5em;
+  color: var(--color-very-dark-cyan);
+  background-color: var(--color-light-grayish-cyan-2);
+  border-radius: 0.3em;
+}
+
+.input-wrapper input::placeholder {
+  color: var(--color-dark-grayish-cyan-2);
+}
+
+.text-right {
+  text-align: right;
+}
+
+.tips-list {
+  font-size: var(--font-form-input-size);
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(5em, 1fr));
+  gap: 0.6em;
+}
+
+.tips-item {
+  color: var(--color-light-grayish-cyan-2);
+  background-color: var(--color-very-dark-cyan);
+  border-radius: 0.2em;
+  padding: 0.3em 0;
+  cursor: pointer;
+}
+
+.tips-item * {
+  cursor: pointer;
+}
+
+.tips-item-custom {
+  color: var(--color-dark-grayish-cyan);
+  background-color: var(--color-light-grayish-cyan-2);
+}
+
+section.result {
+  display: flex;
+  flex-direction: column;
+  padding: 2.5em;
+  background-color: var(--color-very-dark-cyan);
+  border-radius: 1em;
+}
+
+.result > div {
+  flex-grow: 1;
+}
+
+.result-tip,
+.result-total {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.result-tip {
+  margin-bottom: 1.5em;
+}
+
+.tip-amount-text,
+.total-amount-text {
+  font-weight: bold;
+  color: var(--color-light-grayish-cyan-2);
+}
+
+.per-person-text {
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: var(--color-dark-grayish-cyan-2);
+  margin-top: 0.2em;
+}
+
+.reset-btn {
+  font-size: 1.3rem;
+  color: var(--color-very-dark-cyan);
+  padding: 0.5em;
+  background-color: var(--color-strong-cyan);
+  transition: all 0.2s ease-in-out;
 }
