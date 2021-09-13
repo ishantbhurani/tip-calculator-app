@@ -20,6 +20,99 @@
     <title>Tip Calculator App</title>
   </head>
   <body>
-    Tip Calculator App
+    <div class="container">
+      <header>
+        <img src="./images/logo.svg" alt="logo" />
+      </header>
+      <main>
+        <div class="card">
+          <section class="calculation">
+            <form class="tip-calc-form">
+              <div class="form-group">
+                <label for="bill-amount" class="bill-label">Bill</label>
+                <span class="input-wrapper">
+                  <img src="./images/icon-dollar.svg" alt="dollar ($) icon" />
+                  <input
+                    type="number"
+                    id="bill-amount"
+                    name="bill"
+                    class="text-right"
+                    placeholder="0"
+                  />
+                </span>
+              </div>
+              <div class="form-group">
+                <p class="select-tip-text">Select Tip %</p>
+                <ul class="tips-list">
+                  <li class="tips-item">
+                    <input type="radio" id="tip-5" name="tip" value="5" />
+                    <label for="tip-5">5%</label>
+                  </li>
+                  <li class="tips-item">
+                    <input type="radio" id="tip-10" name="tip" value="10" />
+                    <label for="tip-10">10%</label>
+                  </li>
+                  <li class="tips-item">
+                    <input type="radio" id="tip-15" name="tip" value="15" />
+                    <label for="tip-15">15%</label>
+                  </li>
+                  <li class="tips-item">
+                    <input type="radio" id="tip-25" name="tip" value="25" />
+                    <label for="tip-25">25%</label>
+                  </li>
+                  <li class="tips-item">
+                    <input type="radio" id="tip-50" name="tip" value="50" />
+                    <label for="tip-50">50%</label>
+                  </li>
+                  <li class="tips-item tips-item-custom">
+                    <input
+                      type="radio"
+                      id="tip-custom"
+                      name="tip"
+                      value="custom"
+                    />
+                    <label for="tip-custom">Custom</label>
+                  </li>
+                </ul>
+              </div>
+              <div class="form-group">
+                <label for="number-of-people" class="number-of-people-label"
+                  >Number of People</label
+                >
+                <span class="input-wrapper">
+                  <img src="./images/icon-person.svg" alt="person icon" />
+                  <input
+                    type="number"
+                    id="number-of-people"
+                    name="people"
+                    class="text-right"
+                    placeholder="0"
+                  />
+                </span>
+              </div>
+            </form>
+          </section>
+          <section class="result">
+            <div>
+              <div class="result-tip">
+                <div class="result-tip-info">
+                  <p class="tip-amount-text">Tip Amount</p>
+                  <p class="per-person-text">/ person</p>
+                </div>
+                <h2 class="tip-amount">$0.00</h2>
+              </div>
+              <div class="result-total">
+                <div class="result-total-info">
+                  <p class="total-amount-text">Total</p>
+                  <p class="per-person-text">/ person</p>
+                </div>
+                <h2 class="total-amount">$0.00</h2>
+              </div>
+            </div>
+            <button class="reset-btn" disabled>Reset</button>
+          </section>
+        </div>
+      </main>
+    </div>
   </body>
 </html>
