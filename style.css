@@ -190,6 +190,12 @@ section.calculation {
   border-radius: 0.2em;
   padding: 0.3em 0;
   cursor: pointer;
+  transition: background-color 0.2s, color 0.2s ease-in-out;
+}
+
+.tips-item:hover {
+  background-color: var(--color-lighter-cyan);
+  color: var(--color-very-dark-cyan);
 }
 
 .tips-item * {
