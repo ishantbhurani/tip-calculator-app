@@ -3,6 +3,7 @@ const numberOfPeopleInput = document.getElementById("number-of-people");
 const tipsItems = document.querySelectorAll(".tips-item");
 const tipAmount = document.querySelector(".tip-amount");
 const totalAmount = document.querySelector(".total-amount");
+const resetBtn = document.querySelector(".reset-btn");
 
 let hasError = false;
 let checkedRadio = null;
@@ -23,13 +24,13 @@ const calculate = () => {
     isNaN(numberOfPeople) ||
     numberOfPeople < 1
   ) {
-    console.log("leaving");
     return;
   }
   const tip = (billAmount * tipPercent) / 100;
   const total = billAmount + tip;
   tipAmount.textContent = `$${Number(tip / numberOfPeople).toFixed(2)}`;
   totalAmount.textContent = `$${Number(total / numberOfPeople).toFixed(2)}`;
+  resetBtn.disabled = false;
 };
 
 billInput.onfocus = (e) => {
@@ -83,3 +84,23 @@ tipsItems.forEach((tipsItem) => {
       }
     });
 });
+
+resetBtn.onclick = () => {
+  billInput.value = "";
+  billAmount = 0;
+
+  numberOfPeopleInput.value = "";
+  numberOfPeople = 0;
+
+  if (checkedRadio) {
+    checkedRadio.children.tip.checked = false;
+    checkedRadio.classList.remove("checked");
+  }
+  checkedRadio = null;
+  tipPercent = 0;
+
+  tipAmount.textContent = "$0.00";
+  totalAmount.textContent = "$0.00";
+
+  resetBtn.disabled = true;
+};
