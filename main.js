@@ -2,35 +2,25 @@ const billInput = document.getElementById("bill-amount");
 const numberOfPeopleInput = document.getElementById("number-of-people");
 const tipsItems = document.querySelectorAll(".tips-item");
 
-const colorStrongCyan = "hsl(172, 67%, 45%)";
-const colorSoftRed = "hsl(0, 93%, 68%)";
-const colorTransparent = "transparent";
-
 let hasError = false;
 let billAmount = 0;
 let numberOfPeople = 0;
 let checkedRadio = null;
 
-const changeBorderColor = (elem, borderColor) =>
-  (elem.style.borderColor = borderColor);
-
 billInput.onfocus = (e) => {
-  changeBorderColor(e.target.parentNode, colorStrongCyan);
+  e.target.parentNode.classList.add("focused");
 };
 
 billInput.onblur = (e) => {
-  changeBorderColor(e.target.parentNode, colorTransparent);
+  e.target.parentNode.classList.remove("focused");
 };
 
 numberOfPeopleInput.onfocus = (e) => {
-  changeBorderColor(e.target.parentNode, colorStrongCyan);
+  e.target.parentNode.classList.add("focused");
 };
 
 numberOfPeopleInput.onblur = (e) => {
-  changeBorderColor(
-    e.target.parentNode,
-    hasError ? colorSoftRed : colorTransparent
-  );
+  e.target.parentNode.classList.remove("focused");
 };
 
 numberOfPeopleInput.onchange = (e) => {
