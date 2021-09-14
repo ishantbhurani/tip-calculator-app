@@ -4,6 +4,7 @@ const tipsItems = document.querySelectorAll(".tips-item");
 const tipAmount = document.querySelector(".tip-amount");
 const totalAmount = document.querySelector(".total-amount");
 const resetBtn = document.querySelector(".reset-btn");
+const tipsItemCustom = document.querySelector(".tips-item-custom");
 
 let hasError = false;
 let checkedRadio = null;
@@ -75,9 +76,14 @@ tipsItems.forEach((tipsItem) => {
   }),
     tipsItem.children.tip.addEventListener("focus", () => {
       if (checkedRadio != tipsItem) {
-        if (checkedRadio) checkedRadio.classList.remove("checked");
+        if (checkedRadio) {
+          checkedRadio.classList.remove("focused");
+          checkedRadio.classList.remove("checked");
+        }
         checkedRadio = tipsItem;
-        checkedRadio.classList.add("checked");
+        if (checkedRadio === tipsItemCustom)
+          checkedRadio.classList.add("focused");
+        else checkedRadio.classList.add("checked");
         tipPercent = checkedRadio.children.tip.value;
         if (isNaN(tipPercent)) tipPercent = 0;
         else calculate();
@@ -94,6 +100,7 @@ resetBtn.onclick = () => {
 
   if (checkedRadio) {
     checkedRadio.children.tip.checked = false;
+    checkedRadio.classList.remove("focused");
     checkedRadio.classList.remove("checked");
   }
   checkedRadio = null;
@@ -103,4 +110,10 @@ resetBtn.onclick = () => {
   totalAmount.textContent = "$0.00";
 
   resetBtn.disabled = true;
+};
+
+tipsItemCustom.onchange = (e) => {
+  tipPercent = parseInt(e.target.value);
+  if (isNaN(tipPercent)) tipPercent = 0;
+  else calculate();
 };
