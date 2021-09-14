@@ -3,9 +3,10 @@ const numberOfPeopleInput = document.getElementById("number-of-people");
 const tipsItems = document.querySelectorAll(".tips-item");
 
 let hasError = false;
+let checkedRadio = null;
 let billAmount = 0;
 let numberOfPeople = 0;
-let checkedRadio = null;
+let tip = 0;
 
 billInput.onfocus = (e) => {
   e.target.parentNode.classList.add("focused");
@@ -42,10 +43,12 @@ billInput.onchange = (e) => {
 
 tipsItems.forEach((tipsItem) => {
   tipsItem.addEventListener("click", (e) => {
-    e.preventDefault();
     tipsItem.children.tip.checked = true;
+    tipsItem.children.tip.focus();
     if (checkedRadio) checkedRadio.classList.remove("checked");
     checkedRadio = tipsItem;
     checkedRadio.classList.add("checked");
+    tip = checkedRadio.children.tip.value;
+    if (isNaN(tip)) tip = 0;
   });
 });
