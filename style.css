@@ -215,6 +215,7 @@ section.calculation {
   color: var(--color-very-dark-cyan);
   background-color: var(--color-light-grayish-cyan-2);
   border: 2px solid transparent;
+  padding-right: 0.8em;
 }
 
 .tips-item-custom input {
@@ -236,6 +237,7 @@ section.result {
 
 .result > div {
   flex-grow: 1;
+  margin-bottom: 1.5em;
 }
 
 .result-tip,
@@ -274,4 +276,33 @@ section.result {
 .reset-btn:enabled:hover,
 .reset-btn:enabled:focus {
   background-color: var(--color-lighter-cyan);
+}
+
+@media screen and (max-width: 1080px) {
+  h2 {
+    font-size: 2rem;
+  }
+
+  header {
+    margin-bottom: 2em;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 500px;
+    margin: 7vh auto;
+  }
+
+  .card {
+    display: block;
+    padding: 1.5em;
+  }
+
+  section.result {
+    padding: 1.5em;
+  }
+
+  .reset-btn {
+    font-size: 1.15rem;
+  }
 }
