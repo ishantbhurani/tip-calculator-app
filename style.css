@@ -165,16 +165,19 @@ section.calculation {
   border: 2px solid transparent;
 }
 
-.input-wrapper input::placeholder {
+.input-wrapper input::placeholder,
+.tips-item-custom input::placeholder {
   color: var(--color-dark-grayish-cyan-2);
 }
 
 .input-wrapper:hover,
-.input-wrapper:focus {
+.input-wrapper:focus,
+.tips-item-custom:hover {
   border-color: var(--color-strong-cyan);
 }
 
-.input-wrapper.focused {
+.input-wrapper.focused,
+.tips-item-custom.focused {
   border-color: var(--color-strong-cyan);
 }
 
@@ -199,7 +202,7 @@ section.calculation {
   transition: background-color 0.2s, color 0.2s ease-in-out;
 }
 
-.tips-item:hover {
+.tips-item:not(.tips-item-custom):hover {
   background-color: var(--color-lighter-cyan);
   color: var(--color-very-dark-cyan);
 }
@@ -209,8 +212,13 @@ section.calculation {
 }
 
 .tips-item-custom {
-  color: var(--color-dark-grayish-cyan);
+  color: var(--color-very-dark-cyan);
   background-color: var(--color-light-grayish-cyan-2);
+  border: 2px solid transparent;
+}
+
+.tips-item-custom input {
+  text-align: right;
 }
 
 .tips-item.checked {
