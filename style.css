@@ -172,6 +172,10 @@ section.calculation {
   border-color: var(--color-strong-cyan);
 }
 
+.input-wrapper.focused {
+  border-color: var(--color-strong-cyan);
+}
+
 .text-right {
   text-align: right;
 }
