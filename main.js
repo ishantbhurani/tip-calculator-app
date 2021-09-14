@@ -42,13 +42,17 @@ billInput.onchange = (e) => {
 };
 
 tipsItems.forEach((tipsItem) => {
-  tipsItem.addEventListener("click", (e) => {
+  tipsItem.addEventListener("click", () => {
     tipsItem.children.tip.checked = true;
     tipsItem.children.tip.focus();
-    if (checkedRadio) checkedRadio.classList.remove("checked");
-    checkedRadio = tipsItem;
-    checkedRadio.classList.add("checked");
-    tip = checkedRadio.children.tip.value;
-    if (isNaN(tip)) tip = 0;
-  });
+  }),
+    tipsItem.children.tip.addEventListener("focus", () => {
+      if (checkedRadio != tipsItem) {
+        if (checkedRadio) checkedRadio.classList.remove("checked");
+        checkedRadio = tipsItem;
+        checkedRadio.classList.add("checked");
+        tip = checkedRadio.children.tip.value;
+        if (isNaN(tip)) tip = 0;
+      }
+    });
 });
