@@ -50,14 +50,14 @@ Users should be able to:
 
 | Color                | Hex                                                                                      |
 | -------------------- | ---------------------------------------------------------------------------------------- |
-| strong-cyan          | ![hsl(172, 67%, 45%)](https://via.placeholder.com/10/26c0ab?text=+) hsl(172, 67%, 45%)   |
-| lighter-cyan         | ![hsl(172, 67%, 65%)](https://via.placeholder.com/10/6ae2d2?text=+) hsl(172, 67%, 65%)   |
-| soft-red             | ![hsl(0, 93%, 68%)](https://via.placeholder.com/10/f96262?text=+) hsl(0, 93%, 68%)       |
-| very-dark-cyan       | ![hsl(183, 100%, 15%)](https://via.placeholder.com/10/00494d?text=+) hsl(183, 100%, 15%) |
-| dark-grayish-cyan    | ![hsl(186, 14%, 43%)](https://via.placeholder.com/10/5e7a7d?text=+) hsl(186, 14%, 43%)   |
-| dark-grayish-cyan-2  | ![hsl(184, 14%, 56%)](https://via.placeholder.com/10/7f9c9f?text=+) hsl(184, 14%, 56%)   |
-| light-grayish-cyan   | ![hsl(185, 41%, 84%)](https://via.placeholder.com/10/c5e4e7?text=+) hsl(185, 41%, 84%)   |
-| light-grayish-cyan-2 | ![hsl(189, 41%, 97%)](https://via.placeholder.com/10/f4fafa?text=+) hsl(189, 41%, 97%)   |
+| Strong Cyan          | ![hsl(172, 67%, 45%)](https://via.placeholder.com/10/26c0ab?text=+) hsl(172, 67%, 45%)   |
+| Lighter Cyan         | ![hsl(172, 67%, 65%)](https://via.placeholder.com/10/6ae2d2?text=+) hsl(172, 67%, 65%)   |
+| Soft Red             | ![hsl(0, 93%, 68%)](https://via.placeholder.com/10/f96262?text=+) hsl(0, 93%, 68%)       |
+| Very Dark Cyan       | ![hsl(183, 100%, 15%)](https://via.placeholder.com/10/00494d?text=+) hsl(183, 100%, 15%) |
+| Dark Grayish Cyan    | ![hsl(186, 14%, 43%)](https://via.placeholder.com/10/5e7a7d?text=+) hsl(186, 14%, 43%)   |
+| Dark Grayish Cyan 2  | ![hsl(184, 14%, 56%)](https://via.placeholder.com/10/7f9c9f?text=+) hsl(184, 14%, 56%)   |
+| Light Grayish Cyan   | ![hsl(185, 41%, 84%)](https://via.placeholder.com/10/c5e4e7?text=+) hsl(185, 41%, 84%)   |
+| Light Grayish Cyan 2 | ![hsl(189, 41%, 97%)](https://via.placeholder.com/10/f4fafa?text=+) hsl(189, 41%, 97%)   |
 | White                | ![hsl(0, 0%, 100%)](https://via.placeholder.com/10/ffffff?text=+) hsl(0, 0%, 100%)       |
 
 ## Run Locally
